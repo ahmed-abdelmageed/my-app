@@ -14,13 +14,10 @@ export default function MainLayout({userData , setUserData}) {
     return (
         <div>
             <NavBar logOut={logOut} userData={userData}/>
-            <div className="container">
-                <div className="container">
+            {/* <div className="container">  */}
 
                 <Outlet></Outlet>
-                </div>
-
-            </div>
+            {/* </div> */}
 
         </div>
     )
