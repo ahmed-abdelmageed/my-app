@@ -67,19 +67,19 @@ export default function Login({ saveUserData }) {
 
 
 
-        <h3 className='text-black text-center pb-5'>Login Now  </h3>
+        <h3 className='text-black text-center pb-5 fw-bold'>Login Now  </h3>
 
 
         {error.length > 0 ? <div className="alert alert-danger my-2">{error}</div> : ''}
         <form className='form-container' onSubmit={submitLoginForm}>
-          <label  htmlFor='email' className='text-black'>email:</label>
+          <label  htmlFor='email' className='text-black'>email</label>
           <input onChange={getUserData} type='email' className='form-control my-2 my-input' name='email' id='email' />
 
           {errorList.filter((err) => err.context.label == 'email')[0] ? <div className="alert alert-danger my-2">
 
             <p>{errorList.filter((err) => err.context.label == 'email')[0]?.message}</p>
           </div> : ''}
-          <label htmlFor='password' className='text-black'>password:</label>
+          <label htmlFor='password' className='text-black'>password</label>
           <input onChange={getUserData} type='password' className='form-control my-2 my-input' name='password' id='password' />
 
           {errorList.filter((err) => err.context.label == 'password')[0] ? <div className="alert alert-danger my-2">
@@ -89,7 +89,7 @@ export default function Login({ saveUserData }) {
 
         <div className='login-btn'>
             {isLoading ? <button type='button' className='btn button btn-warning rounded-5 text-black'> <i className='fas fa-spinner fa-spin'></i></button>
-              : <button  type='submit' className='btn button bg-warning rounded-5'> <i class="fa-solid fa-arrow-right"></i></button>
+              : <button  type='submit' className='btn button bg-info rounded-5'> <i class="fa-solid fa-arrow-right"></i></button>
             }
           </div>
 

@@ -5,7 +5,7 @@ import * as Icon from 'react-bootstrap-icons';
 export default function NavBar({ userData, logOut }) {
     return (
 
-        <nav className="navbar navbar-expand-sm navbar-light bg-light">
+        <nav className="navbar  navbar-expand-sm navbar-light bg-light">
             <div className="container-fluid ">
                 <Link className="navbar-brand text-danger" to="/">
 

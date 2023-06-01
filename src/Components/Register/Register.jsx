@@ -14,7 +14,7 @@ export default function Register() {
     name: Yup.string().required('Name is required').min(3, 'minimum length is 3 caracters').max(10, 'maximum length is 10 characters'),
     email: Yup.string().email('Email is invalid').required('email is required'),
     password: Yup.string().required('Password is required').matches(/^[A-z][a-z0-9]{5,10}$/, 'password must start with uppercase '),
-    rePassword: Yup.string().required('rePassword is required').oneOf([Yup.ref('password')], 'password and rePassword doesnt match'),
+    rePassword: Yup.string().required('Re-password is required').oneOf([Yup.ref('password')], 'password and Re-password doesnt match'),
     phone: Yup.string().required('Phone is required').matches(/^01[0125][0-9]{8}$/, ' Invalid phone '),
   })
 
@@ -57,7 +57,7 @@ export default function Register() {
       <div className="w-75 login-container  mx-auto py-4 bg-light rounded-4 p-5 m-5 ">
 
 
-        <h3 className='text-black text-center pb-2'>Register Now </h3>
+        <h3 className='text-black text-center pb-2 fw-bold'>Register Now </h3>
         {messageError ? <div className="alert alert-danger"> {messageError} </div>
           : null}
 
@@ -78,7 +78,7 @@ export default function Register() {
           {formik.errors.password && formik.touched.password ? <div className="alert alert-danger">
             {formik.errors.password}
           </div> : ''}
-          <label className='text-black' htmlFor='rePassword'>rePassword</label>
+          <label className='text-black' htmlFor='rePassword'>Re-Password</label>
           <input onBlur={formik.handleBlur} className='form-control mb-2' onChange={formik.handleChange} value={formik.values.rePassword} type='password' rePassword='rePassword' id='rePassword' />
 
           {formik.errors.rePassword && formik.touched.rePassword ? <div className="alert alert-danger">
@@ -92,8 +92,8 @@ export default function Register() {
             {formik.errors.phone}
           </div> : ''}
           <div className='register-btn'>
-            {isLoading ? <button type='button' className='btn button btn-warning rounded-5 text-black'> <i className='fas fa-spinner fa-spin'></i></button>
-              : <button disabled={!(formik.isValid && formik.dirty)} type='submit' className='btn button bg-warning rounded-5'> <i class="fa-solid fa-arrow-right"></i></button>
+            {isLoading ? <button type='button' className='btn button btn-info rounded-5 text-black'> <i className='fas fa-spinner fa-spin'></i></button>
+              : <button disabled={!(formik.isValid && formik.dirty)} type='submit' className='btn button bg-info rounded-5'> <i class="fa-solid fa-arrow-right"></i></button>
             }
           </div>
 

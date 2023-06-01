@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
 
 :root {
-  --bg-color: #111517;
+  --bg-color: #181d25;
   --main-font: 'Montserrat', sans-serif;
-  --font-color: black;
+  --font-color: #fff;
 }
 
 body {
-  background-color: white;
+  background-color: var(--bg-color);
   font-family: 'Montserrat Alternates', sans-serif;
   color: var(--font-color);
 }
@@ -93,4 +93,10 @@ a {
 .button{
 width: 55px;
 height: 55px;
+}
+.movie-title{
+  color: black;
+}
+.movie-title:hover{
+  color: black;
 }

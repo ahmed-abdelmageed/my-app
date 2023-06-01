@@ -39,7 +39,7 @@ export default function Tv() {
   return (
     <div className='container py-5'>
       <div className="row">
-        <input type='text' onChange={searchTv} className=' form-control bg-dark text-white mb-5 ' placeholder='search' />
+        <input type='text' onChange={searchTv} className=' form-control bg-light text-white mb-5 ' placeholder='search' />
         {tv.map((item, index) => (
           <MediaItem key={index} item={item} type='tv'/>))}
 

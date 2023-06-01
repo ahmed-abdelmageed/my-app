@@ -40,7 +40,7 @@ export default function Movies() {
   return (
     <div className='container py-5'>
       <div className="row">
-      <input type='text' onChange={searchMovie} className=' form-control bg-dark text-white mb-5 ' placeholder='search' />
+      <input type='text' onChange={searchMovie} className=' form-control bg-light  text-white mb-5 ' placeholder='search' />
         {movie.map((item, index) => (
           <MediaItem key={index} item={item} media_type="movie" />))}
 
